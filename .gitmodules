@@ -1,3 +1,6 @@
 [submodule "public"]
 	path = public
 	url = https://github.com/richwandell/Hamden-Public-Figures.git
+[submodule "ci_example"]
+	path = ci_example
+	url = https://github.com/richwandell/Codeigniter-Example-App.git
