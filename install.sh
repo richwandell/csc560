@@ -5,6 +5,7 @@ service mysql restart
 cp /var/www/mongod.conf /etc/mongod.conf
 service mongod restart
 mysql -proot -e "grant all privileges on *.* to 'root'@'%' with grant option;"
+mysql -proot -e "UPDATE mysql.user SET Password=PASSWORD('') WHERE User='root'; flush privileges;"
 ln -s /var/www/scotchbox.local.conf /etc/apache2/sites-available/scotchbox.local.conf
 
 add-apt-repository ppa:ondrej/php
